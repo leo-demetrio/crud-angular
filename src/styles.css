@@ -10,3 +10,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.msg-success {
+    background-color: aqua;
+    color: black;
+}
+.msg-error {
+    background-color: #e35e6b;
+    color: black;
+}
