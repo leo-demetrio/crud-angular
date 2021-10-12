@@ -8,7 +8,8 @@ import { Product } from './product.model';
   providedIn: 'root'
 })
 export class ProductService {
-  private baseUrl = "http://localhost:3001/products";
+  // private baseUrl = "/api/v1/products";
+  private baseUrl = "http://localhost:3001/products"
 
   constructor(
     private snackBar: MatSnackBar,
@@ -16,11 +17,12 @@ export class ProductService {
     ) { }
   
   
-  showMessage(msg: string): void {
+  showMessage(msg: string, isError: boolean = false): void {
     this.snackBar.open(msg, 'X', {
       duration: 3000,
       horizontalPosition: "right",
-      verticalPosition: "top"
+      verticalPosition: "top",
+      panelClass: isError ? ['msg-error'] : ['msg-success']
     });
   }
 
